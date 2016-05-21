@@ -2,9 +2,591 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title Vive
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %meta{:charset => "utf-8"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:300,400,700,900", :rel => "stylesheet", :type => "text/css"}/
   %body
-    = yield
+    / HEADER
+    %header
+      .bg-white
+        .header-topbar
+          .container
+            %ul.topbar-left.list-unstyled.pull-left
+              %li
+                %a.language{:href => "javascript:void(0)"}
+                  %i.topbar-icon.fa.fa-globe
+                  %span English
+                  %i.topbar-icon.icons-dropdown.fa.fa-angle-down
+                %ul.dropdown-language.list-unstyled.hide
+                  %li
+                    %a{:href => "#"} Vietnam
+                  %li
+                    %a{:href => "#"} Japan
+                  %li
+                    %a{:href => "#"} Korea
+              %li
+                %a.hotline{:href => "#"}
+                  %i.topbar-icon.fa.fa-phone
+                  %span +84 909 015 345
+              %li
+                %a.email{:href => "#"}
+                  %i.topbar-icon.fa.fa-map-marker
+                  %span contactus@sunhouse.com
+            .topbar-right.pull-right
+              .socials
+                %a.link.facebook{:href => "#"}
+                  %i.fa.fa-facebook-square
+                %a.link.twitter{:href => "#"}
+                  %i.fa.fa-twitter
+                %a.link.pinterest{:href => "#"}
+                  %i.fa.fa-pinterest
+                %a.link.blog{:href => "#"}
+                  %i.fa.fa-rss
+                %a.link.instagram{:href => "#"}
+                  %i.fa.fa-instagram
+                %a.link.dribbble{:href => "#"}
+                  %i.fa.fa-dribbble
+        .header-main.header-style2
+          .container
+            .header-main-wrapper
+              .navbar-header
+                .logo.logo-black
+                  %a.header-logo{:href => "index.html"}
+                    %img{:alt => "", :src => "assets/images/logo-1.png"}/
+                .logo.logo-white
+                  %a.header-logo{:href => "index.html"}
+                    %img{:alt => "", :src => "assets/images/logo-2.png"}/
+                %button.navbar-toggle.btn-navbar{"data-target" => ".navigation", "data-toggle" => "collapse", :type => "button"}
+                  %span.icon-bar
+                  %span.icon-bar
+                  %span.icon-bar
+              %nav.navigation.collapse.navbar-collapse
+                %ul.nav-links.nav.navbar-nav
+                  %li.dropdown.active
+                    %a.main-menu{:href => "javascript:void(0)"}
+                      Home
+                      %span.fa.fa-angle-down.icons-dropdown
+                    %ul.dropdown-menu.dropdown-menu-1
+                      %li
+                        %a.link-page{:href => "index.html"} Home page default
+                      %li
+                        %a.link-page{:href => "homepage-02.html"} Homepage Header Centered Full Color
+                      %li
+                        %a.link-page{:href => "homepage-03.html"} Homepage Header Centered Transparent
+                      %li
+                        %a.link-page{:href => "homepage-04.html"} Homepage Topbar Transparent
+                      %li
+                        %a.link-page{:href => "homepage-05.html"} Homepage Full Color
+                      %li
+                        %a.link-page{:href => "homepage-06.html"} Homepage slider
+                  %li.dropdown
+                    %a.main-menu{:href => "javascript:void(0)"}
+                      agents
+                      %span.fa.fa-angle-down.icons-dropdown
+                    %ul.dropdown-menu.dropdown-menu-1
+                      %li
+                        %a.link-page{:href => "agent-list.html"} agent list
+                      %li
+                        %a.link-page{:href => "agent-single.html"} agent single
+                      %li
+                        %a.link-page{:href => "agencies-list.html"} agencies list
+                      %li
+                        %a.link-page{:href => "agency-detail.html"} agency detail
+                      %li
+                        %a.link-page{:href => "user-profile.html"} user profile
+                  %li.dropdown
+                    %a.main-menu{:href => "javascript:void(0)"}
+                      property
+                      %span.fa.fa-angle-down.icons-dropdown
+                    %ul.dropdown-menu.dropdown-menu-1
+                      %li
+                        %a.link-page{:href => "properties.html"} property list/grid
+                      %li
+                        %a.link-page{:href => "properties-non-sidebar.html"} property nonsidebar
+                      %li
+                        %a.link-page{:href => "properties-masonry.html"} property masonry
+                      %li
+                        %a.link-page{:href => "property-detail.html"} property detail
+                      %li
+                        %a.link-page{:href => "search-properties.html"} map filter
+                  %li.dropdown
+                    %a.main-menu{:href => "javascript:void(0)"}
+                      blog
+                      %span.fa.fa-angle-down.icons-dropdown
+                    %ul.dropdown-menu.dropdown-menu-1
+                      %li
+                        %a.link-page{:href => "blog.html"} blog list
+                      %li
+                        %a.link-page{:href => "blog-detail.html"} blog detail
+                  %li.dropdown
+                    %a.main-menu{:href => "javascript:void(0)"}
+                      page
+                      %span.fa.fa-angle-down.icons-dropdown
+                    %ul.dropdown-menu.dropdown-menu-1
+                      %li
+                        %a.link-page{:href => "service.html"} services
+                      %li
+                        %a.link-page{:href => "gallery.html"} gallery
+                      %li
+                        %a.link-page{:href => "about-us.html"} about us
+                      %li
+                        %a.link-page{:href => "pricing.html"} Pricing
+                      %li
+                        %a.link-page{:href => "sign-up.html"} sign in
+                      %li
+                        %a.link-page{:href => "register.html"} Register
+                      %li
+                        %a.link-page{:href => "coming-soon.html"} coming soon
+                      %li
+                        %a.link-page{:href => "faq.html"} FAQ
+                      %li
+                        %a.link-page{:href => "404.html"} page 404
+                  %li
+                    %a.main-menu{:href => "contact.html"} contact
+    / WRAPPER
+    #wrapper-content
+      / PAGE WRAPPER
+      #page-wrapper
+        / MAIN CONTENT
+        .main-content
+          / CONTENT
+          .content
+            .section
+              .banner-02.bg-overlay.banner-full-screen
+                .banner-02-wrapper
+                  .container
+                    .wrapper-title
+                      %h2.title Modern, Innovation & Beautiful
+                      %h4.sub-title find new place & ENjoy your life
+                    .content
+                      %p.text Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                    .group-button
+                      %a.btn.btn-blue{:href => "contact.html"} SCHEDULE VISIT
+                      %a.btn.btn-transparent.white{:href => "properties.html"} view more
+            .section.scroll-to
+              .about-house-section.padding-top.padding-bottom
+                .container
+                  .about-house-wrapper
+                    .about-house-image
+                      -# %img.img-responsive{:alt => "", :src => "assets/images/libs/about-home-1.jpg"}/
+                    .about-house-content
+                      %h2.title About Emilla Romagna Villa
+                      %p.text Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      %p.text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+                      .info-house
+                        .info
+                          %i.icon-house_1
+                          %p 32,000 Sq Ft
+                        .info
+                          %i.icon-bed
+                          %p 8 bedrooms
+                        .info
+                          %i.icon-bath
+                          %p 4 bathrooms
+            .section
+              .newest-properties.padding-top.padding-bottom
+                .container
+                  .newest-properties-wrapper
+                    .sunhouse-title
+                      .icon-image
+                        -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}/
+                        / .icon-title
+                        / i.icon-church
+                      %h2.main-title Newest Properties
+                      %p.sub-title Haven't you heard about the recession: Topten reasons why you should properties
+                    .row
+                      .newest-properties-content
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-1.jpg"}/
+                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-9.jpg"}/
+                            .note.for-sale
+                              %p.text for sale
+                            .wrapper-content
+                              .info-house
+                                .info
+                                  %i.icon-house_1
+                                  %p 12,000 Sq Ft
+                                .info
+                                  %i.icon-bed
+                                  %p 3 bedroom
+                                .info
+                                  %i.icon-bath
+                                  %p 2 bathroom
+                              .about-house
+                                %a.title{:href => "search-properties.html"} Trentino-Alto Adige
+                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .place-house
+                                  %i.fa.fa-map-marker
+                                  %a{:href => "#"} 568 E 1st Ave, Ney Jersey
+                                .price $ 765,300
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-2.jpg"}/
+                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-8.jpg"}/
+                            .note.for-rent
+                              %p.text for rent
+                            .wrapper-content
+                              .info-house
+                                .info
+                                  %i.icon-house_1
+                                  %p 12,000 Sq Ft
+                                .info
+                                  %i.icon-bed
+                                  %p 3 bedroom
+                                .info
+                                  %i.icon-bath
+                                  %p 2 bathroom
+                              .about-house
+                                %a.title{:href => "property-detail.html"} Friuli-Venezia Giulia
+                                %p.text Aute irure dolor in reprehenderit in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .place-house
+                                  %i.fa.fa-map-marker
+                                  %a{:href => "search-properties.html"} 12 1st Ave, New fanco
+                                .price
+                                  $ 980/
+                                  %span month
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-3.jpg"}/
+                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-7.jpg"}/
+                            .note.for-sale
+                              %p.text for sale
+                            .wrapper-content
+                              .info-house
+                                .info
+                                  %i.icon-house_1
+                                  %p 12,000 Sq Ft
+                                .info
+                                  %i.icon-bed
+                                  %p 3 bedroom
+                                .info
+                                  %i.icon-bath
+                                  %p 2 bathroom
+                              .about-house
+                                %a.title{:href => "property-detail.html"} San Marino
+                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .place-house
+                                  %i.fa.fa-map-marker
+                                  %a{:href => "#"} 658 L 2nd Ave, Boston
+                                .price $ 850,700
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-4.jpg"}/
+                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-12.jpg"}/
+                            .note.for-sale
+                              %p.text for sale
+                            .wrapper-content
+                              .info-house
+                                .info
+                                  %i.icon-house_1
+                                  %p 7,000 Sq Ft
+                                .info
+                                  %i.icon-bed
+                                  %p 2 bedroom
+                                .info
+                                  %i.icon-bath
+                                  %p 2 bathroom
+                              .about-house
+                                %a.title{:href => "property-detail.html"} rose villa
+                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .place-house
+                                  %i.fa.fa-map-marker
+                                  %a{:href => "#"} 568 E 1st Ave, Ney Jersey
+                                .price $ 683,000
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-5.jpg"}/
+                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-10.jpg"}/
+                            .note.for-sale
+                              %p.text for sale
+                            .wrapper-content
+                              .info-house
+                                .info
+                                  %i.icon-house_1
+                                  %p 14,000 Sq Ft
+                                .info
+                                  %i.icon-bed
+                                  %p 4 bedroom
+                                .info
+                                  %i.icon-bath
+                                  %p 2 bathroom
+                              .about-house
+                                %a.title{:href => "property-detail.html"} penta house
+                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .place-house
+                                  %i.fa.fa-map-marker
+                                  %a{:href => "#"} 23 A 3rd Bra,Dence
+                                .price $ 890,300
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-6.jpg"}/
+                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-11.jpg"}/
+                            .note.for-rent
+                              %p.text for rent
+                            .wrapper-content
+                              .info-house
+                                .info
+                                  %i.icon-house_1
+                                  %p 8,000 Sq Ft
+                                .info
+                                  %i.icon-bed
+                                  %p 2 bedroom
+                                .info
+                                  %i.icon-bath
+                                  %p 1 bathroom
+                              .about-house
+                                %a.title{:href => "property-detail.html"} big head house
+                                %p.text Aute irure dolor in reprehenderit in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .place-house
+                                  %i.fa.fa-map-marker
+                                  %a{:href => "#"} 120 2nd Ave, New handiee
+                                .price
+                                  $ 780/
+                                  %span month
+            .section
+              .our-service.padding-top.padding-bottom
+                .container
+                  .our-service-wrapper
+                    .sunhouse-title
+                      .icon-image
+                        -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}/
+                        / .icon-title
+                        / i.icon-mail_box
+                      %h2.main-title our service
+                      %p.sub-title Psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    .row
+                      .our-service-content
+                        .col-md-3
+                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
+                            .icon-wrapper
+                              %i.icon-our-service.icon-house_sell
+                            %p.name Sale Service
+                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                            %a.btn-readmore{:href => "service.html"} read more
+                        .col-md-3
+                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.45s", "data-wow-duration" => "1s"}
+                            .icon-wrapper
+                              %i.icon-our-service.icon-rent
+                            %p.name Renting Service
+                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                            %a.btn-readmore{:href => "service.html"} read more
+                        .col-md-3
+                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.7s", "data-wow-duration" => "1s"}
+                            .icon-wrapper
+                              %i.icon-our-service.icon-house_2
+                            %p.name Property Management
+                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                            %a.btn-readmore{:href => "service.html"} read more
+                        .col-md-3
+                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.95s", "data-wow-duration" => "1s"}
+                            .icon-wrapper
+                              %i.icon-our-service.icon-brush
+                            %p.name Free Market Analysis
+                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                            %a.btn-readmore{:href => "service.html"} read more
+            .section
+              .find-best-house.bg-overlay.padding-bottom.padding-top
+                .container
+                  .find-best-house-wrapper
+                    %p.sub-title We provide sevice
+                    %h2.title Find Your Best House For Life
+                    %p.content Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+                    %a.btn.btn-blue{:href => "search-properties.html"} view more
+            .section
+              .contact-us
+                .container
+                  .contact-us-scroll{"data-parallax" => "{\"y\":\"20%\"}"}
+                    .contact-us-wrapper
+                      .contact-us-content
+                        %h2.title contact
+                        %p.text Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.
+                        .info-list
+                          %ul.list-unstyled
+                            %li.info-line
+                              %i.info-icon.fa.fa-map-marker
+                              %a.info-text{:href => "#"} 1390 Somerset Drive, Raleigh, NC 27603
+                            %li.info-line
+                              %i.info-icon.fa.fa-phone
+                              %a.info-text{:href => "#"} 910-740-0626
+                            %li.info-line
+                              %i.info-icon.fa.fa-fax
+                              %a.info-text{:href => "#"} 910-740-0626
+                            %li.info-line
+                              %i.info-icon.fa.fa-envelope-o
+                              %a.info-text{:href => "#"} domain@sunhouse.com
+                            %li.info-line
+                              %i.info-icon.fa.fa-skype
+                              %a.info-text{:href => "#"} domain.sunhouse
+                    .new-letter-wrapper
+                      .new-letter-content
+                        %h4.title NEWSLETTER
+                        %p.text Subcribe to receive new properties with good price.
+                        %form
+                          %input.contact-form{:placeholder => "Your Name", :type => "text"}/
+                          %input.contact-form{:placeholder => "Your Email", :type => "email"}/
+                          %textarea.contact-form{:placeholder => "Your Message"}
+                          %a.btn.btn-transparent.white{:href => "#"} send message
+      / BUTTON BACK TO TOP
+      #back-top
+        %a{:href => "#top"}
+          %i.fa.fa-angle-double-up
+    / FOOTER
+    %footer
+      .bg-dark
+        .footer-main
+          .container
+            .footer-main-wrapper.padding-top-2.padding-bottom.row
+              .col-md-6.col-2
+                .row
+                  .col-sm-6.col-xs-6
+                    .sunhouse-widget.widget
+                      .footer-logo.footer-logo-white
+                        -# %img{:alt => "", :src => "assets/images/logo-2.png"}/
+                      .footer-logo.footer-logo-black
+                        -# %img{:alt => "", :src => "assets/images/logo-1.png"}/
+                      .content-widget
+                        %p.text SunHouse perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium aperiam.
+                        %p.text Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
+                        .phone-number
+                          %i.fa.fa-phone
+                          %span 1800-000-1203
+                        .socials
+                          %a.link.facebook{:href => "#"}
+                            %i.fa.fa-facebook-square
+                          %a.link.twitter{:href => "#"}
+                            %i.fa.fa-twitter
+                          %a.link.pinterest{:href => "#"}
+                            %i.fa.fa-pinterest
+                          %a.link.blog{:href => "#"}
+                            %i.fa.fa-rss
+                          %a.link.instagram{:href => "#"}
+                            %i.fa.fa-instagram
+                          %a.link.dribbble{:href => "#"}
+                            %i.fa.fa-dribbble
+                  .col-sm-6.col-xs-6
+                    .widget
+                      .useful-link-widget
+                        .title-widget USEFUL LINKS
+                        .content-widget
+                          .row
+                            .col-xs-6
+                              %ul.list-unstyled
+                                %li
+                                  %a{:href => "#"} Introduction
+                                %li
+                                  %a{:href => "#"} Our Approach
+                                %li
+                                  %a{:href => "#"} Support Forum
+                                %li
+                                  %a{:href => "#"} Help Center
+                                %li
+                                  %a{:href => "#"} Layout Features
+                                %li
+                                  %a{:href => "#"} Fre Questions
+                                %li
+                                  %a{:href => "#"} Return Policy
+                                %li
+                                  %a{:href => "#"} Send a Question
+                            .col-xs-6
+                              %ul.list-unstyled
+                                %li
+                                  %a{:href => "#"} Our Process
+                                %li
+                                  %a{:href => "#"} Support Center
+                                %li
+                                  %a{:href => "#"} Join Team
+              .col-md-6.col-2
+                .row
+                  .col-sm-6.col-xs-6
+                    .widget
+                      .form-blog-widget
+                        .title-widget form the blog
+                        .content-widget
+                          .media
+                            .media-left
+                              %a.img-hover{:href => "#"}
+                                -# %img{:alt => "", :src => "assets/images/gallery/gallery-04.jpg"}/
+                            .media-right
+                              %a.title{:href => "#"} An Open Letter to Real Estate Tech Founders
+                              .info
+                                .date-created.item
+                                  %a.text{:href => "#"} Aug 18, 2015
+                          .media
+                            .media-left
+                              %a.img-hover{:href => "#"}
+                                -# %img{:alt => "", :src => "assets/images/gallery/gallery-09.jpg"}/
+                            .media-right
+                              %a.title{:href => "#"} What's Wrong with Venture Capital
+                              .info
+                                .date-created.item
+                                  %a.text{:href => "#"} Otc 22, 2015
+                          .media
+                            .media-left
+                              %a.img-hover{:href => "#"}
+                                -# %img{:alt => "", :src => "assets/images/gallery/gallery-01.jpg"}/
+                            .media-right
+                              %a.title{:href => "#"} A Peek into the Future of Real Estate
+                              .info
+                                .date-created.item
+                                  %a.text{:href => "#"} Sep 1, 2015
+                  .col-sm-6.col-xs-6
+                    .widget
+                      .gallery-widget
+                        .title-widget GALLERIES
+                        .content-widget
+                          .gallery-list
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-01.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-02.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-03.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-04.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-05.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-06.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-07.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-08.jpg"}/
+                            -# %a.thumb.img-hover{:href => "#"}
+                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-09.jpg"}/
+        .clearfix
+        .hyperlink
+          .container
+            .pull-left.hyper-left
+              %span © Designed by
+              %span.name swlabs.
+            .pull-right.hyper-right
+              %ul
+                %li
+                  %a.link{:href => "index.html"} Home
+                %li
+                  %a.link{:href => "#"} FAQ
+                %li
+                  %a.link{:href => "#"} Privacy & Term
+                %li
+                  %a.link{:href => "contact.html"} Contact
+                %li
+                  %a.link{:href => "#"} Help
+
+= javascript_include_tag 'application', 'data-turbolinks-track' => true

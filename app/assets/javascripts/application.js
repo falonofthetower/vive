@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap
+//= require jquery.appear
+//= require owl.carousel.min
+//= require wow.min
+//= require jquery.fancybox
+//= require jquery.selectbox-0.2.min
+//= require jquery-smoothscroll
+//= require main
