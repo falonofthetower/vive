@@ -56,10 +56,12 @@
               .navbar-header
                 .logo.logo-black
                   %a.header-logo{:href => "index.html"}
-                    %img{:alt => "", :src => "assets/images/logo-1.png"}/
+                    %h3
+                      logo
+                    -# %img{:alt => "", :src => "assets/images/logo-1.png"}/
                 .logo.logo-white
                   %a.header-logo{:href => "index.html"}
-                    %img{:alt => "", :src => "assets/images/logo-2.png"}/
+                    -# %img{:alt => "", :src => "assets/images/logo-2.png"}/
                 %button.navbar-toggle.btn-navbar{"data-target" => ".navigation", "data-toggle" => "collapse", :type => "button"}
                   %span.icon-bar
                   %span.icon-bar
@@ -376,7 +378,7 @@
                         .col-md-3
                           .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
                             .icon-wrapper
-                              %i.icon-our-service.icon-house_sell
+                              %i.fa.fa-home.fa-5x
                             %p.name Sale Service
                             %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
                             %a.btn-readmore{:href => "service.html"} read more
@@ -467,19 +469,6 @@
                         .phone-number
                           %i.fa.fa-phone
                           %span 1800-000-1203
-                        .socials
-                          %a.link.facebook{:href => "#"}
-                            %i.fa.fa-facebook-square
-                          %a.link.twitter{:href => "#"}
-                            %i.fa.fa-twitter
-                          %a.link.pinterest{:href => "#"}
-                            %i.fa.fa-pinterest
-                          %a.link.blog{:href => "#"}
-                            %i.fa.fa-rss
-                          %a.link.instagram{:href => "#"}
-                            %i.fa.fa-instagram
-                          %a.link.dribbble{:href => "#"}
-                            %i.fa.fa-dribbble
                   .col-sm-6.col-xs-6
                     .widget
                       .useful-link-widget
@@ -504,78 +493,23 @@
                                   %a{:href => "#"} Return Policy
                                 %li
                                   %a{:href => "#"} Send a Question
-                            .col-xs-6
-                              %ul.list-unstyled
-                                %li
-                                  %a{:href => "#"} Our Process
-                                %li
-                                  %a{:href => "#"} Support Center
-                                %li
-                                  %a{:href => "#"} Join Team
               .col-md-6.col-2
                 .row
-                  .col-sm-6.col-xs-6
+                  .col-sm-12.col-xs-6
                     .widget
                       .form-blog-widget
                         .title-widget form the blog
                         .content-widget
                           .media
-                            .media-left
-                              %a.img-hover{:href => "#"}
-                                -# %img{:alt => "", :src => "assets/images/gallery/gallery-04.jpg"}/
-                            .media-right
-                              %a.title{:href => "#"} An Open Letter to Real Estate Tech Founders
-                              .info
-                                .date-created.item
-                                  %a.text{:href => "#"} Aug 18, 2015
+                            %a.title{:href => "#"} What's Wrong with Venture Capital
                           .media
-                            .media-left
-                              %a.img-hover{:href => "#"}
-                                -# %img{:alt => "", :src => "assets/images/gallery/gallery-09.jpg"}/
-                            .media-right
-                              %a.title{:href => "#"} What's Wrong with Venture Capital
-                              .info
-                                .date-created.item
-                                  %a.text{:href => "#"} Otc 22, 2015
-                          .media
-                            .media-left
-                              %a.img-hover{:href => "#"}
-                                -# %img{:alt => "", :src => "assets/images/gallery/gallery-01.jpg"}/
-                            .media-right
-                              %a.title{:href => "#"} A Peek into the Future of Real Estate
-                              .info
-                                .date-created.item
-                                  %a.text{:href => "#"} Sep 1, 2015
-                  .col-sm-6.col-xs-6
-                    .widget
-                      .gallery-widget
-                        .title-widget GALLERIES
-                        .content-widget
-                          .gallery-list
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-01.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-02.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-03.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-04.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-05.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-06.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-07.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-08.jpg"}/
-                            -# %a.thumb.img-hover{:href => "#"}
-                            -#   %img.img-responsive{:alt => "", :src => "assets/images/gallery/gallery-09.jpg"}/
+                            %a.title{:href => "#"} A Peek into the Future of Real Estate
         .clearfix
         .hyperlink
           .container
             .pull-left.hyper-left
               %span © Designed by
-              %span.name swlabs.
+              %span.name Stay Creative Design.
             .pull-right.hyper-right
               %ul
                 %li
