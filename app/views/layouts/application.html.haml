@@ -57,12 +57,6 @@
                         %a.link-page{:href => "properties.html"} Become an Investor
                       %li
                         %a.link-page{:href => "properties-non-sidebar.html"} Investor Login
-                      %li
-                        %a.link-page{:href => "properties-masonry.html"} property masonry
-                      %li
-                        %a.link-page{:href => "property-detail.html"} property detail
-                      %li
-                        %a.link-page{:href => "search-properties.html"} map filter
                   %li.dropdown
                     %a.main-menu{:href => "javascript:void(0)"}
                       Our Properties
@@ -81,13 +75,14 @@
                 .banner-02-wrapper
                   .container
                     .wrapper-title
-                      %h2.title Modern, Innovation & Beautiful
-                      %h4.sub-title find new place & ENjoy your life
+                      %h2.title Real Estate Investing done correctly
+                      %h4.sub-title
+                        Offering You the Safe and Right Choice For Real Estate Investing
                     .content
-                      %p.text Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                      %p.text Yielding higher returns than the normal investment route.
                     .group-button
-                      %a.btn.btn-blue{:href => "contact.html"} SCHEDULE VISIT
-                      %a.btn.btn-transparent.white{:href => "properties.html"} view more
+                      %a.btn.btn-blue{:href => "contact.html"} Learn more
+                      %a.btn.btn-transparent.white{:href => "properties.html"} Contact us
             .section.scroll-to
               .about-house-section.padding-top.padding-bottom
                 .container
@@ -106,173 +101,83 @@
                   .newest-properties-wrapper
                     .sunhouse-title
                       .icon-image
-                        -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}/
-                        / .icon-title
-                        / i.icon-church
-                      %h2.main-title Newest Properties
-                      %p.sub-title Haven't you heard about the recession: Topten reasons why you should properties
+                        -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}
+                      %h2.main-title A few of our properties
+                      %p.sub-title These are just a few of our properties that we have worked with
                     .row
                       .newest-properties-content
                         .col-md-4.col-xs-6
                           .sunhouse-item
                             %a.wrapper-image{:href => "property-detail.html"}
-                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-1.jpg"}/
-                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-9.jpg"}/
+                              = image_tag "house-1.jpg"
                             .note.for-sale
-                              %p.text for sale
+                              %p.text SOLD
                             .wrapper-content
-                              .info-house
-                                .info
-                                  %i.icon-house_1
-                                  %p 12,000 Sq Ft
-                                .info
-                                  %i.icon-bed
-                                  %p 3 bedroom
-                                .info
-                                  %i.icon-bath
-                                  %p 2 bathroom
                               .about-house
-                                %a.title{:href => "search-properties.html"} Trentino-Alto Adige
+                                .title 2301 Riverside Dr.
                                 %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
                               .more-info-house
-                                .place-house
-                                  %i.fa.fa-map-marker
-                                  %a{:href => "#"} 568 E 1st Ave, Ney Jersey
-                                .price $ 765,300
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-2.jpg"}/
-                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-8.jpg"}/
-                            .note.for-rent
-                              %p.text for rent
-                            .wrapper-content
-                              .info-house
-                                .info
-                                  %i.icon-house_1
-                                  %p 12,000 Sq Ft
-                                .info
-                                  %i.icon-bed
-                                  %p 3 bedroom
-                                .info
-                                  %i.icon-bath
-                                  %p 2 bathroom
-                              .about-house
-                                %a.title{:href => "property-detail.html"} Friuli-Venezia Giulia
-                                %p.text Aute irure dolor in reprehenderit in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .place-house
-                                  %i.fa.fa-map-marker
-                                  %a{:href => "search-properties.html"} 12 1st Ave, New fanco
                                 .price
-                                  $ 980/
-                                  %span month
                         .col-md-4.col-xs-6
                           .sunhouse-item
                             %a.wrapper-image{:href => "property-detail.html"}
-                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-3.jpg"}/
-                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-7.jpg"}/
+                              = image_tag "house-1.jpg"
                             .note.for-sale
-                              %p.text for sale
+                              %p.text SOLD
                             .wrapper-content
-                              .info-house
-                                .info
-                                  %i.icon-house_1
-                                  %p 12,000 Sq Ft
-                                .info
-                                  %i.icon-bed
-                                  %p 3 bedroom
-                                .info
-                                  %i.icon-bath
-                                  %p 2 bathroom
                               .about-house
-                                %a.title{:href => "property-detail.html"} San Marino
+                                .title 2301 Riverside Dr.
                                 %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
                               .more-info-house
-                                .place-house
-                                  %i.fa.fa-map-marker
-                                  %a{:href => "#"} 658 L 2nd Ave, Boston
-                                .price $ 850,700
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-4.jpg"}/
-                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-12.jpg"}/
-                            .note.for-sale
-                              %p.text for sale
-                            .wrapper-content
-                              .info-house
-                                .info
-                                  %i.icon-house_1
-                                  %p 7,000 Sq Ft
-                                .info
-                                  %i.icon-bed
-                                  %p 2 bedroom
-                                .info
-                                  %i.icon-bath
-                                  %p 2 bathroom
-                              .about-house
-                                %a.title{:href => "property-detail.html"} rose villa
-                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .place-house
-                                  %i.fa.fa-map-marker
-                                  %a{:href => "#"} 568 E 1st Ave, Ney Jersey
-                                .price $ 683,000
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-5.jpg"}/
-                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-10.jpg"}/
-                            .note.for-sale
-                              %p.text for sale
-                            .wrapper-content
-                              .info-house
-                                .info
-                                  %i.icon-house_1
-                                  %p 14,000 Sq Ft
-                                .info
-                                  %i.icon-bed
-                                  %p 4 bedroom
-                                .info
-                                  %i.icon-bath
-                                  %p 2 bathroom
-                              .about-house
-                                %a.title{:href => "property-detail.html"} penta house
-                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .place-house
-                                  %i.fa.fa-map-marker
-                                  %a{:href => "#"} 23 A 3rd Bra,Dence
-                                .price $ 890,300
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              -# %img.img-responsive.layout-1{:alt => "", :src => "assets/images/houses/house-6.jpg"}/
-                              -# %img.img-responsive.layout-2{:alt => "", :src => "assets/images/houses/house-11.jpg"}/
-                            .note.for-rent
-                              %p.text for rent
-                            .wrapper-content
-                              .info-house
-                                .info
-                                  %i.icon-house_1
-                                  %p 8,000 Sq Ft
-                                .info
-                                  %i.icon-bed
-                                  %p 2 bedroom
-                                .info
-                                  %i.icon-bath
-                                  %p 1 bathroom
-                              .about-house
-                                %a.title{:href => "property-detail.html"} big head house
-                                %p.text Aute irure dolor in reprehenderit in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .place-house
-                                  %i.fa.fa-map-marker
-                                  %a{:href => "#"} 120 2nd Ave, New handiee
                                 .price
-                                  $ 780/
-                                  %span month
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              = image_tag "house-1.jpg"
+                            .note.for-sale
+                              %p.text sold
+                            .wrapper-content
+                              .about-house
+                                .title 2301 riverside dr.
+                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .price
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              = image_tag "house-1.jpg"
+                            .note.for-sale
+                              %p.text sold
+                            .wrapper-content
+                              .about-house
+                                .title 2301 riverside dr.
+                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .price
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              = image_tag "house-1.jpg"
+                            .note.for-sale
+                              %p.text sold
+                            .wrapper-content
+                              .about-house
+                                .title 2301 riverside dr.
+                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .price
+                        .col-md-4.col-xs-6
+                          .sunhouse-item
+                            %a.wrapper-image{:href => "property-detail.html"}
+                              = image_tag "house-1.jpg"
+                            .note.for-sale
+                              %p.text sold
+                            .wrapper-content
+                              .about-house
+                                .title 2301 riverside dr.
+                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
+                              .more-info-house
+                                .price
             .section
               .our-service.padding-top.padding-bottom
                 .container
@@ -282,8 +187,8 @@
                         -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}/
                         / .icon-title
                         / i.icon-mail_box
-                      %h2.main-title our services
-                      %p.sub-title Psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                      %h2.main-title How it works
+                      %p.sub-title Vive Investments offering you the safe and right coice for real estate investing.
                     .row
                       .our-service-content
                         .col-md-3
@@ -350,7 +255,7 @@
                     .new-letter-wrapper
                       .new-letter-content
                         %h4.title NEWSLETTER
-                        %p.text Subcribe to receive new properties with good price.
+                        %p.text Subcribe to receive new properties with ood price.
                         %form
                           %input.contact-form{:placeholder => "Your Name", :type => "text"}/
                           %input.contact-form{:placeholder => "Your Email", :type => "email"}/
