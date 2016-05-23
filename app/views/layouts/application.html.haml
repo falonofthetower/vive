@@ -11,332 +11,47 @@
     %link{:href => "http://fonts.googleapis.com/css?family=Roboto:300,400,700,900", :rel => "stylesheet", :type => "text/css"}/
   %body
     / HEADER
-    %header
-      .bg-white
-        .header-topbar
-          .container
-            %ul.topbar-left.list-unstyled.pull-left
-              %li
-                %a.hotline{:href => "tel:9187244758"}
-                  %i.topbar-icon.fa.fa-phone
-                  %span 918 - 724 - 4758
-              %li
-                %a.email{:href => "mailto:info@viveinvestmentssgroup.com"}
-                  %i.topbar-icon.fa.fa-map-marker
-                  %span info@viveinvestmentsgroup.com
-        .header-main.header-style2
-          .container
-            .header-main-wrapper
-              .navbar-header
-                .logo.logo-black
-                  %a.header-logo{:href => "/w"}
-                    %h3.h3-mt-logo-fix
-                      = image_tag "vive-investment-logo.jpg"
-                    -# %img{:alt => "", :src => "assets/images/logo-1.png"}/
-                .logo.logo-white
-                  %a.header-logo{:href => "index.html"}
-                    -# %img{:alt => "", :src => "assets/images/logo-2.png"}/
-                %button.navbar-toggle.btn-navbar{"data-target" => ".navigation", "data-toggle" => "collapse", :type => "button"}
-                  %span.icon-bar
-                  %span.icon-bar
-                  %span.icon-bar
-              %nav.navigation.collapse.navbar-collapse
-                %ul.nav-links.nav.navbar-nav
-                  %li.dropdown.active
-                    %a.main-menu{:href => "/"}
-                      About us
-                  %li.dropdown
-                    %a.main-menu{:href => "javascript:void(0)"}
-                      Our Services
-                  %li.dropdown
-                    %a.main-menu{:href => "javascript:void(0)"}
-                      Investor Area
-                      %span.fa.fa-angle-down.icons-dropdown
-                    %ul.dropdown-menu.dropdown-menu-1
-                      %li
-                        %a.link-page{:href => "properties.html"} Become an Investor
-                      %li
-                        %a.link-page{:href => "properties-non-sidebar.html"} Investor Login
-                  %li.dropdown
-                    %a.main-menu{:href => "javascript:void(0)"}
-                      Our Properties
-                  %li
-                    %a.main-menu{:href => "#contact"} contact
+    = render "layouts/header"
     / WRAPPER
-    #wrapper-content
-      / PAGE WRAPPER
-      #page-wrapper
-        / MAIN CONTENT
-        .main-content
-          / CONTENT
-          .content
-            .section
-              .banner-02.bg-overlay.banner-full-screen
-                .banner-02-wrapper
-                  .container
-                    .wrapper-title
-                      %h2.title Real Estate Investing done correctly
-                      %h4.sub-title
-                        Offering You the Safe and Right Choice For Real Estate Investing
-                    .content
-                      %p.text Yielding higher returns than the normal investment route.
-                    .group-button
-                      %a.btn.btn-blue{:href => "contact.html"} Learn more
-                      %a.btn.btn-transparent.white{:href => "properties.html"} Contact us
-            .section.scroll-to
-              .about-house-section.padding-top.padding-bottom
-                .container
-                  .about-house-wrapper
-                    .about-house-image
-                      = image_tag "house.jpg"
-                    .about-house-content
-                      %h2.title Vive Investments
-                      %p.text We are a privately owned and operated Real Estate Investment Company. Vive Investments is a one-stop essesntial resource for individuals, like you who are ready to achieve finacial stability. Vive Investments has helped many investors reach above average returns.
-                      %p.text
-                        If you are interested in viewing our process and how we can provide you with greater returns in your investments please
-                        = link_to "click here"
-            .section
-              .newest-properties.padding-top.padding-bottom
-                .container
-                  .newest-properties-wrapper
-                    .sunhouse-title
-                      .icon-image
-                        -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}
-                      %h2.main-title A few of our properties
-                      %p.sub-title These are just a few of our properties that we have worked with
-                    .row
-                      .newest-properties-content
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              = image_tag "house-1.jpg"
-                            .note.for-sale
-                              %p.text SOLD
-                            .wrapper-content
-                              .about-house
-                                .title 2301 Riverside Dr.
-                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .price
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              = image_tag "house-1.jpg"
-                            .note.for-sale
-                              %p.text SOLD
-                            .wrapper-content
-                              .about-house
-                                .title 2301 Riverside Dr.
-                                %p.text Duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .price
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              = image_tag "house-1.jpg"
-                            .note.for-sale
-                              %p.text sold
-                            .wrapper-content
-                              .about-house
-                                .title 2301 riverside dr.
-                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .price
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              = image_tag "house-1.jpg"
-                            .note.for-sale
-                              %p.text sold
-                            .wrapper-content
-                              .about-house
-                                .title 2301 riverside dr.
-                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .price
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              = image_tag "house-1.jpg"
-                            .note.for-sale
-                              %p.text sold
-                            .wrapper-content
-                              .about-house
-                                .title 2301 riverside dr.
-                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .price
-                        .col-md-4.col-xs-6
-                          .sunhouse-item
-                            %a.wrapper-image{:href => "property-detail.html"}
-                              = image_tag "house-1.jpg"
-                            .note.for-sale
-                              %p.text sold
-                            .wrapper-content
-                              .about-house
-                                .title 2301 riverside dr.
-                                %p.text duis aute irure dolor in repre in voluptate velit es sint cillumor dolore eu fugiat
-                              .more-info-house
-                                .price
-            .section
-              .our-service.padding-top.padding-bottom
-                .container
-                  .our-service-wrapper
-                    .sunhouse-title
-                      .icon-image
-                        -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}/
-                        / .icon-title
-                        / i.icon-mail_box
-                      %h2.main-title How it works
-                      %p.sub-title Vive Investments offering you the safe and right coice for real estate investing.
-                    .row
-                      .our-service-content
-                        .col-md-3
-                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
-                            .icon-wrapper
-                              %i.fa.fa-home.fa-5x
-                            %p.name Sale Service
-                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
-                            %a.btn-readmore{:href => "service.html"} read more
-                        .col-md-3
-                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
-                            .icon-wrapper
-                              %i.fa.fa-home.fa-5x
-                            %p.name Sale Service
-                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
-                            %a.btn-readmore{:href => "service.html"} read more
-                        .col-md-3
-                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
-                            .icon-wrapper
-                              %i.fa.fa-home.fa-5x
-                            %p.name Sale Service
-                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
-                            %a.btn-readmore{:href => "service.html"} read more
-                        .col-md-3
-                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
-                            .icon-wrapper
-                              %i.fa.fa-home.fa-5x
-                            %p.name Sale Service
-                            %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
-                            %a.btn-readmore{:href => "service.html"} read more
-            .section
-              .find-best-house.bg-overlay.padding-bottom.padding-top
-                .container
-                  .find-best-house-wrapper
-                    %p.sub-title We provide sevice
-                    %h2.title Find Your Best House For Life
-                    %p.content Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
-                    %a.btn.btn-blue{:href => "search-properties.html"} view more
-            .section
-              .contact-us
-                .container
-                  .contact-us-scroll{"data-parallax" => "{\"y\":\"20%\"}"}
-                    .contact-us-wrapper
-                      .contact-us-content
-                        %h2.title contact
-                        %p.text Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.
-                        .info-list
-                          %ul.list-unstyled
-                            %li.info-line
-                              %i.info-icon.fa.fa-map-marker
-                              %a.info-text{:href => "#"} 1390 Somerset Drive, Raleigh, NC 27603
-                            %li.info-line
-                              %i.info-icon.fa.fa-phone
-                              %a.info-text{:href => "#"} 910-740-0626
-                            %li.info-line
-                              %i.info-icon.fa.fa-fax
-                              %a.info-text{:href => "#"} 910-740-0626
-                            %li.info-line
-                              %i.info-icon.fa.fa-envelope-o
-                              %a.info-text{:href => "#"} domain@sunhouse.com
-                            %li.info-line
-                              %i.info-icon.fa.fa-skype
-                              %a.info-text{:href => "#"} domain.sunhouse
-                    .new-letter-wrapper
-                      .new-letter-content
-                        %h4.title NEWSLETTER
-                        %p.text Subcribe to receive new properties with ood price.
-                        %form
-                          %input.contact-form{:placeholder => "Your Name", :type => "text"}/
-                          %input.contact-form{:placeholder => "Your Email", :type => "email"}/
-                          %textarea.contact-form{:placeholder => "Your Message"}
-                          %a.btn.btn-transparent.white{:href => "#"} send message
-      / BUTTON BACK TO TOP
-      #back-top
-        %a{:href => "#top"}
-          %i.fa.fa-angle-double-up
-    / FOOTER
-    %footer
-      .bg-dark
-        .footer-main
-          .container
-            .footer-main-wrapper.padding-top-2.padding-bottom.row
-              .col-md-6.col-2
-                .row
-                  .col-sm-6.col-xs-6
-                    .sunhouse-widget.widget
-                      .footer-logo.footer-logo-white
-                        -# %img{:alt => "", :src => "assets/images/logo-2.png"}/
-                      .footer-logo.footer-logo-black
-                        -# %img{:alt => "", :src => "assets/images/logo-1.png"}/
-                      .content-widget
-                        %p.text SunHouse perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium aperiam.
-                        %p.text Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
-                        .phone-number
-                          %i.fa.fa-phone
-                          %span 1800-000-1203
-                  .col-sm-6.col-xs-6
-                    .widget
-                      .useful-link-widget
-                        .title-widget USEFUL LINKS
-                        .content-widget
-                          .row
-                            .col-xs-6
-                              %ul.list-unstyled
-                                %li
-                                  %a{:href => "#"} Introduction
-                                %li
-                                  %a{:href => "#"} Our Approach
-                                %li
-                                  %a{:href => "#"} Support Forum
-                                %li
-                                  %a{:href => "#"} Help Center
-                                %li
-                                  %a{:href => "#"} Layout Features
-                                %li
-                                  %a{:href => "#"} Fre Questions
-                                %li
-                                  %a{:href => "#"} Return Policy
-                                %li
-                                  %a{:href => "#"} Send a Question
-              .col-md-6.col-2
-                .row
-                  .col-sm-12.col-xs-6
-                    .widget
-                      .form-blog-widget
-                        .title-widget form the blog
-                        .content-widget
-                          .media
-                            %a.title{:href => "#"} What's Wrong with Venture Capital
-                          .media
-                            %a.title{:href => "#"} A Peek into the Future of Real Estate
-        .clearfix
-        .hyperlink
-          .container
-            .pull-left.hyper-left
-              %span © Designed by
-              %span.name Stay Creative Design.
-            .pull-right.hyper-right
-              %ul
-                %li
-                  %a.link{:href => "index.html"} Home
-                %li
-                  %a.link{:href => "#"} FAQ
-                %li
-                  %a.link{:href => "#"} Privacy & Term
-                %li
-                  %a.link{:href => "contact.html"} Contact
-                %li
-                  %a.link{:href => "#"} Help
-
+    = yield
+    .section
+      .find-best-house.bg-overlay.padding-bottom.padding-top
+        .container
+          .find-best-house-wrapper
+            %p.sub-title Vive Investments
+            %h2.title Interesting in becoming an investor?
+            %a.btn.btn-blue{:href => "search-properties.html"} Our process
+    .section
+      .contact-us
+        .container
+          .contact-us-scroll{"data-parallax" => "{\"y\":\"20%\"}"}
+            .contact-us-wrapper
+              .contact-us-content
+                %h2.title contact
+                %p.text Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.
+                .info-list
+                  %ul.list-unstyled
+                    %li.info-line
+                      %i.info-icon.fa.fa-map-marker
+                      = link_to "8107 E Admiral Pl, Ste 8 Tulsa, OK", class: "info-text"
+                    %li.info-line
+                      %i.info-icon.fa.fa-phone
+                      %a.info-text{:href => "tel:918-724-4758"} 918-724-4758
+                    %li.info-line
+                      %i.info-icon.fa.fa-envelope-o
+                      = link_to "info@viveinvestsgroup.com", class: "info-text"
+            .new-letter-wrapper
+              .new-letter-content
+                %h4.title Questions?
+                %p.text Send us your questions, comments.
+                %form
+                  %input.contact-form{:placeholder => "Your Name", :type => "text"}/
+                  %input.contact-form{:placeholder => "Your Email", :type => "email"}/
+                  %textarea.contact-form{:placeholder => "Your Message"}
+                  %a.btn.btn-transparent.white{:href => "#"} send message
+    #back-top
+      %a{:href => "#top"}
+        %i.fa.fa-angle-double-up
+        / FOOTER
+    = render "layouts/footer"
 = javascript_include_tag 'application', 'data-turbolinks-track' => true

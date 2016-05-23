@@ -1,0 +1,49 @@
+%header
+  .bg-white
+    .header-topbar
+      .container
+        %ul.topbar-left.list-unstyled.pull-left
+          %li
+            %a.hotline{:href => "tel:9187244758"}
+              %i.topbar-icon.fa.fa-phone
+              %span 918 - 724 - 4758
+          %li
+            %a.email{:href => "mailto:info@viveinvestmentssgroup.com"}
+              %i.topbar-icon.fa.fa-map-marker
+              %span info@viveinvestmentsgroup.com
+    .header-main.header-style2
+      .container
+        .header-main-wrapper
+          .navbar-header
+            .logo.logo-black
+              %a.header-logo{:href => "/w"}
+                %h3.h3-mt-logo-fix
+                  = image_tag "vive-investment-logo.jpg"
+            .logo.logo-white
+              %a.header-logo{:href => "/"}
+            %button.navbar-toggle.btn-navbar{"data-target" => ".navigation", "data-toggle" => "collapse", :type => "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+          %nav.navigation.collapse.navbar-collapse
+            %ul.nav-links.nav.navbar-nav
+              %li.dropdown
+                %a.main-menu{:href => "/"}
+                  About us
+              %li
+                %a.main-menu{:href => "/"}
+                  Our Services
+              %li.dropdown
+                %a.main-menu{:href => "javascript:void(0)"}
+                  Investor Area
+                  %span.fa.fa-angle-down.icons-dropdown
+                %ul.dropdown-menu.dropdown-menu-1
+                  %li
+                    %a.link-page{:href => "properties.html"} Become an Investor
+                  %li
+                    %a.link-page{:href => "properties-non-sidebar.html"} Investor Login
+              %li.dropdown
+                %a.main-menu{:href => "javascript:void(0)"}
+                  Our Properties
+              %li
+                %a.main-menu{:href => "#contact"} contact
