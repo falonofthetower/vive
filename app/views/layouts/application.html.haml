@@ -66,31 +66,8 @@
                   %li.dropdown
                     %a.main-menu{:href => "javascript:void(0)"}
                       Our Properties
-                  %li.dropdown
-                    %a.main-menu{:href => "javascript:void(0)"}
-                      page
-                      %span.fa.fa-angle-down.icons-dropdown
-                    %ul.dropdown-menu.dropdown-menu-1
-                      %li
-                        %a.link-page{:href => "service.html"} services
-                      %li
-                        %a.link-page{:href => "gallery.html"} gallery
-                      %li
-                        %a.link-page{:href => "about-us.html"} about us
-                      %li
-                        %a.link-page{:href => "pricing.html"} Pricing
-                      %li
-                        %a.link-page{:href => "sign-up.html"} sign in
-                      %li
-                        %a.link-page{:href => "register.html"} Register
-                      %li
-                        %a.link-page{:href => "coming-soon.html"} coming soon
-                      %li
-                        %a.link-page{:href => "faq.html"} FAQ
-                      %li
-                        %a.link-page{:href => "404.html"} page 404
                   %li
-                    %a.main-menu{:href => "contact.html"} contact
+                    %a.main-menu{:href => "#contact"} contact
     / WRAPPER
     #wrapper-content
       / PAGE WRAPPER
@@ -116,21 +93,13 @@
                 .container
                   .about-house-wrapper
                     .about-house-image
-                      -# %img.img-responsive{:alt => "", :src => "assets/images/libs/about-home-1.jpg"}/
+                      = image_tag "house.jpg"
                     .about-house-content
-                      %h2.title About Emilla Romagna Villa
-                      %p.text Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      %p.text Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
-                      .info-house
-                        .info
-                          %i.icon-house_1
-                          %p 32,000 Sq Ft
-                        .info
-                          %i.icon-bed
-                          %p 8 bedrooms
-                        .info
-                          %i.icon-bath
-                          %p 4 bathrooms
+                      %h2.title Vive Investments
+                      %p.text We are a privately owned and operated Real Estate Investment Company. Vive Investments is a one-stop essesntial resource for individuals, like you who are ready to achieve finacial stability. Vive Investments has helped many investors reach above average returns.
+                      %p.text
+                        If you are interested in viewing our process and how we can provide you with greater returns in your investments please
+                        = link_to "click here"
             .section
               .newest-properties.padding-top.padding-bottom
                 .container
@@ -313,7 +282,7 @@
                         -# %img.img-responsive{:alt => "", :src => "assets/images/logo-title-1.png"}/
                         / .icon-title
                         / i.icon-mail_box
-                      %h2.main-title our service
+                      %h2.main-title our services
                       %p.sub-title Psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                     .row
                       .our-service-content
@@ -325,24 +294,24 @@
                             %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
                             %a.btn-readmore{:href => "service.html"} read more
                         .col-md-3
-                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.45s", "data-wow-duration" => "1s"}
+                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
                             .icon-wrapper
-                              %i.icon-our-service.icon-rent
-                            %p.name Renting Service
+                              %i.fa.fa-home.fa-5x
+                            %p.name Sale Service
                             %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
                             %a.btn-readmore{:href => "service.html"} read more
                         .col-md-3
-                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.7s", "data-wow-duration" => "1s"}
+                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
                             .icon-wrapper
-                              %i.icon-our-service.icon-house_2
-                            %p.name Property Management
+                              %i.fa.fa-home.fa-5x
+                            %p.name Sale Service
                             %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
                             %a.btn-readmore{:href => "service.html"} read more
                         .col-md-3
-                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.95s", "data-wow-duration" => "1s"}
+                          .our-service-items.wow.fadeInUp{"data-wow-delay" => "0.2s", "data-wow-duration" => "1s"}
                             .icon-wrapper
-                              %i.icon-our-service.icon-brush
-                            %p.name Free Market Analysis
+                              %i.fa.fa-home.fa-5x
+                            %p.name Sale Service
                             %p.text Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
                             %a.btn-readmore{:href => "service.html"} read more
             .section
