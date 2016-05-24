@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'about-vive-investments' => 'pages#about'
   get 'our-process' => 'pages#about_process'
+  resources :properties, only: [:index, :show]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -49,7 +50,9 @@ Rails.application.routes.draw do
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
-  #   namespace :admin do
+  namespace :admin do
+    resources :properties
+  end
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
