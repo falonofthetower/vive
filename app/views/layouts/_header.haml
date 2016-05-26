@@ -16,7 +16,7 @@
         .header-main-wrapper
           .navbar-header
             .logo.logo-black
-              %a.header-logo{:href => "/w"}
+              %a.header-logo{:href => "/"}
                 %h3.h3-mt-logo-fix
                   = image_tag "vive-investment-logo.jpg"
             .logo.logo-white
@@ -37,10 +37,25 @@
                 %ul.dropdown-menu.dropdown-menu-1
                   %li
                     %a.link-page{:href => "/our-process"} Our process
-                  %li
-                    %a.link-page{:href => "properties-non-sidebar.html"} Investor Login
-              %li.dropdown
-                %a.main-menu{:href => "javascript:void(0)"}
-                  Our Properties
               %li
                 %a.main-menu{:href => "#contact"} contact
+              - if current_user
+                %li
+                  %a.main-menu{:href => "/properties"}
+                    View Properties
+                - if current_user.admin
+                  %li.dropdown
+                    %a.main-menu{:href => "javascript:void(0)"}
+                      Manage Properties
+                      %span.fa.fa-angle-down.icons-dropdown
+                    %ul.dropdown-menu.dropdown-menu-1
+                      %li
+                        %a.link-page{:href => "/admin/properties"} View properties
+                      %li
+                        %a.link-page{:href => "/admin/properties/new"} Add properties
+                %li
+                  %a.main-menu{:href => "/logout"}
+                    Log out
+              - else
+                %li.dropdown
+                  %a.main-menu{:href => "/login"} Investor Login

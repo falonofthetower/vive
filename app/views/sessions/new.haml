@@ -1,0 +1,19 @@
+.row.mt-20.mb-60
+  .col-xs-12.col-sm-4.col-sm-offset-4.mt-20
+    %p.text-center
+      Please enter your email and password that was given to you
+    = form_tag('/sessions', class: 'form-horizontal mt-20') do
+      .form-group
+        %label.col-sm-2.control-label
+          Email:
+        .col-sm-10
+          = text_field_tag(:email, params[:email] || '', class: 'form-control')
+      .form-group
+        %label.col-sm-2.control-label
+          Password:
+        .col-sm-10
+          = password_field_tag(:password, params[:password] || '', class: 'form-control')
+      .form-group
+        %label.col-sm-2.control-label
+        .col-sm-10
+          = submit_tag("Login")

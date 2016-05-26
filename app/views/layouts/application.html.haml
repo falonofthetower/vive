@@ -14,21 +14,22 @@
     = render "layouts/header"
     / WRAPPER
     = yield
-    .section
-      .find-best-house.bg-overlay.padding-bottom.padding-top
-        .container
-          .find-best-house-wrapper
-            %p.sub-title Vive Investments
-            %h2.title Interesting in becoming an investor?
-            %a.btn.btn-blue{:href => "search-properties.html"} Our process
+    - if !@current_user
+      .section
+        .find-best-house.bg-overlay.padding-bottom.padding-top
+          .container
+            .find-best-house-wrapper
+              %p.sub-title Vive Investments
+              %h2.title Interesting in becoming an investor?
+              %a.btn.btn-blue{:href => "search-properties.html"} Our process
     .section
       .contact-us
         .container
           .contact-us-scroll{"data-parallax" => "{\"y\":\"20%\"}"}
             .contact-us-wrapper
-              .contact-us-content
+              #contact.contact-us-content
                 %h2.title contact
-                %p.text Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.
+                %p.text We are available to take your calls and emails at any time or day of the week.
                 .info-list
                   %ul.list-unstyled
                     %li.info-line

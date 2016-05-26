@@ -1,0 +1,49 @@
+.content
+  .section.property-view
+    .container
+      .property-wrapper.padding-top.padding-bottom
+        .row
+          .col-md-12.property-content
+            = form_for([:admin, @property], html: {class: "form-horizontal"}) do |f|
+              .form-group
+                = f.label(:address, class: "col-sm-2 control-label")
+                .col-sm-10
+                  = f.text_field(:address, class: "form-control", placeholder: "Example: 1911 S 73rd East Ave - 74133")
+              .form-group
+                = f.label(:description, class: "col-sm-2 control-label")
+                .col-sm-10
+                  = f.text_field(:description, placeholder: "Add a brief description of the investment opportunity", class: "form-control")
+              .form-group
+                = f.label(:price, class: "col-sm-2 control-label")
+                .col-sm-10
+                  = f.text_field(:price, placeholder: "Example: $350,000", class: "form-control")
+              .form-group
+                = f.label(:image, class: "col-sm-2 control-label")
+                .col-sm-10
+                  = f.file_field(:image)
+              .form-group
+                = f.label(:show_to_site,"Show to non clients", class: "col-sm-2 control-label")
+                .col-sm-10.text-left
+                  .radio
+                    %label
+                      = f.radio_button(:show_to_site, true)
+                      True
+                  .radio
+                    %label
+                      = f.radio_button(:show_to_site, false, class: "ml-20")
+                      False
+              .form-group
+                = f.label(:show_to_site,"Archive Property", class: "col-sm-2 control-label")
+                .col-sm-10.text-left
+                  .radio
+                    %label
+                      = f.radio_button(:archive, true)
+                      True
+                  .radio
+                    %label
+                      = f.radio_button(:archive, false, class: "ml-20")
+                      False
+
+              .form-group
+                .col-sm-offset-2.col-sm-10
+                  = submit_tag("Upload property", class: "btn btn-default")

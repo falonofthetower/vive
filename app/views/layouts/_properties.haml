@@ -1,0 +1,31 @@
+.content
+  .section.property-view
+    .container
+      .property-wrapper.padding-top.padding-bottom
+        %h2.text-center
+          Recent Projects
+        - @properties.each_slice(3) do |properties|
+          .row
+            - properties.each do |property|
+              .property-item.col-md-4.col-xs-6
+                .sunhouse-item
+                  .wrapper-image
+                    = image_tag(property.image, class: "img-responsive")
+                  .wrapper-content
+                    .about-house
+                      .title
+                        = property.address
+                      .lst-item.nodisplay
+                        .info-house
+                        .more-info-house
+                          .place-house
+                            Investment:
+                          .price
+                            = property.price
+                      %p.text
+                        = property.description
+                    .more-info-house.grd-item
+                      .place-house
+                        Total Investment
+                      .price
+                        = property.price

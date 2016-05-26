@@ -1,0 +1,30 @@
+#wrapper-content
+  / PAGE WRAPPER
+  #page-wrapper
+    / MAIN CONTENT
+    .main-content
+      / CONTENT
+      .content
+        .section.page-title.about-us.bg-overlay
+          .container
+            .page-title-wrapper
+              %h2.captions about us
+              %ol.breadcrumb
+                %li
+                  %a{:href => "/"} Home
+                %li.active
+                  %a{:href => "#"} about us
+        .section.service-content
+          .container.margin-top
+            .media.service-graph
+              .media-left.pr100.media-image
+                = image_tag "about-left-image.jpg"
+              .media-right.padding-top-2.pr25
+                .underline.media-heading About Vive Investments
+                .des
+                  %p.text Vive Investments is a privately owned and operated Real Estate investment Company.
+                  %p.text
+                    Most individuals are aware of the importance of having real estate in their financial portfolio, but do not know how to get started. When you look around in the market, it can seem impossible to find Real Estate investments that give you a good rate of return without the extremely high risk. The Real Estate Market can seem overwhelming if you do not have the right set of skills, tools, education, or simply just the time to do the appropriate due diligence.
+                  %p.text
+                    Unlike other financial services firms who look for investors that meet certain minimum annual income or net worth thresholds, Vive Investments is a people-oriented organization that is eager and delighted at the possibility of working with like-minded people who want to be a part of the success this company has already built in investment opportunities. With a commitment to providing individual opportunity in Real Estate Investing, ZIG utilizes proven systems and techniques to provide individuals with opportunities to diversify their financial portfolio in the highly competitive real estate market for a safe investment with great rate of returns.
+        = render 'layouts/properties'
