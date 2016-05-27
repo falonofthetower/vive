@@ -11,48 +11,52 @@
     %link{:href => "http://fonts.googleapis.com/css?family=Roboto:300,400,700,900", :rel => "stylesheet", :type => "text/css"}/
   %body
     / HEADER
-    = render "layouts/header"
-    / WRAPPER
-    = yield
-    - if !@current_user
-      .section
-        .find-best-house.bg-overlay.padding-bottom.padding-top
-          .container
-            .find-best-house-wrapper
-              %p.sub-title Vive Investments
-              %h2.title Interesting in becoming an investor?
-              %a.btn.btn-blue{:href => "search-properties.html"} Our process
+    - flash.each do |name, msg|
+      .row
+        .col-md-12
+          = content_tag :div, msg, class: "#{name} text-center bg-success p-20"
+  = render "layouts/header"
+  / WRAPPER
+  = yield
+  - if !@current_user
     .section
-      .contact-us
+      .find-best-house.bg-overlay.padding-bottom.padding-top
         .container
-          .contact-us-scroll{"data-parallax" => "{\"y\":\"20%\"}"}
-            .contact-us-wrapper
-              #contact.contact-us-content
-                %h2.title contact
-                %p.text We are available to take your calls and emails at any time or day of the week.
-                .info-list
-                  %ul.list-unstyled
-                    %li.info-line
-                      %i.info-icon.fa.fa-map-marker
-                      = link_to "8107 E Admiral Pl, Ste 8 Tulsa, OK", class: "info-text"
-                    %li.info-line
-                      %i.info-icon.fa.fa-phone
-                      %a.info-text{:href => "tel:918-724-4758"} 918-724-4758
-                    %li.info-line
-                      %i.info-icon.fa.fa-envelope-o
-                      = link_to "info@viveinvestmentsgroup.com", class: "info-text"
-            .new-letter-wrapper
-              .new-letter-content
-                %h4.title Questions?
-                %p.text Send us your questions, comments.
-                = form_tag('/contact-email') do
-                  = text_field_tag('name', nil ,class: 'contact-form', placeholder: 'Your Name')
-                  = text_field_tag('email', nil ,class: 'contact-form', placeholder: 'Your Email')
-                  = text_area_tag('message', nil, class: 'contact-form', placeholder: 'Your Message')
-                  = button_tag('send message', class: 'btn btn-transparent white')
-    #back-top
-      %a{:href => "#top"}
-        %i.fa.fa-angle-double-up
-        / FOOTER
-    = render "layouts/footer"
+          .find-best-house-wrapper
+            %p.sub-title Vive Investments
+            %h2.title Interesting in becoming an investor?
+            %a.btn.btn-blue{:href => "search-properties.html"} Our process
+  .section
+    .contact-us
+      .container
+        .contact-us-scroll{"data-parallax" => "{\"y\":\"20%\"}"}
+          .contact-us-wrapper
+            #contact.contact-us-content
+              %h2.title contact
+              %p.text We are available to take your calls and emails at any time or day of the week.
+              .info-list
+                %ul.list-unstyled
+                  %li.info-line
+                    %i.info-icon.fa.fa-map-marker
+                    = link_to "8107 E Admiral Pl, Ste 8 Tulsa, OK", class: "info-text"
+                  %li.info-line
+                    %i.info-icon.fa.fa-phone
+                    %a.info-text{:href => "tel:918-724-4758"} 918-724-4758
+                  %li.info-line
+                    %i.info-icon.fa.fa-envelope-o
+                    = link_to "info@viveinvestmentsgroup.com", class: "info-text"
+          .new-letter-wrapper
+            .new-letter-content
+              %h4.title Questions?
+              %p.text Send us your questions, comments.
+              = form_tag('/contact-email') do
+                = text_field_tag('name', nil ,class: 'contact-form', placeholder: 'Your Name')
+                = text_field_tag('email', nil ,class: 'contact-form', placeholder: 'Your Email')
+                = text_area_tag('message', nil, class: 'contact-form', placeholder: 'Your Message')
+                = button_tag('send message', class: 'btn btn-transparent white')
+  #back-top
+    %a{:href => "#top"}
+      %i.fa.fa-angle-double-up
+      / FOOTER
+  = render "layouts/footer"
 = javascript_include_tag 'application', 'data-turbolinks-track' => true
