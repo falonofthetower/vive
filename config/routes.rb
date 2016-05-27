@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
+  post 'contact-email' => 'contact#send'
 
   resources :properties, only: [:index, :show]
   namespace :admin do

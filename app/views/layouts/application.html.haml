@@ -45,11 +45,11 @@
               .new-letter-content
                 %h4.title Questions?
                 %p.text Send us your questions, comments.
-                %form
-                  %input.contact-form{:placeholder => "Your Name", :type => "text"}/
-                  %input.contact-form{:placeholder => "Your Email", :type => "email"}/
-                  %textarea.contact-form{:placeholder => "Your Message"}
-                  %a.btn.btn-transparent.white{:href => "#"} send message
+                = form_tag('/contact-email') do
+                  = text_field_tag('name', nil ,class: 'contact-form', placeholder: 'Your Name')
+                  = text_field_tag('email', nil ,class: 'contact-form', placeholder: 'Your Email')
+                  = text_area_tag('message', nil, class: 'contact-form', placeholder: 'Your Message')
+                  = button_tag('send message', class: 'btn btn-transparent white')
     #back-top
       %a{:href => "#top"}
         %i.fa.fa-angle-double-up

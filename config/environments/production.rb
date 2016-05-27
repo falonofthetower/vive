@@ -76,4 +76,15 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-end
+
+  ActionMailer::Base.delivery_method = :smtp
+  # SMTP settings for gmail
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.mailgun.org",
+    :port                 => 587,
+    :domain               => ENV['VIVE_DOMAIN'],
+    :user_name            => ENV['VIVE_USERNAME'],
+    :password             => ENV['VIVE_PASSWORD'],
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+}end
